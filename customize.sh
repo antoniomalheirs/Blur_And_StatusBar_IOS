@@ -7,12 +7,12 @@ LATESTARTSERVICE=false
 
 REPLACE="
 "
+
 install_files() {
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
   sleep 2.1
   ui_print "- Mod apply sucess"
   rm -rf /data/system/package_cache/*
-  ui_print " "
 }
 
 run_install() {
@@ -21,9 +21,15 @@ run_install() {
   ui_print "*     Blur_And_StatusBar_IOS     *"
   ui_print "**********************************"
   ui_print " "
-  ui_print "[*] MagiskVersion= $MAGISK_VER"
-  sleep 0.5
-  ui_print "[*] MagiskVersionCode= $MAGISK_VER_CODE"
+  if [ -n "$KSU" ]; then
+      ui_print "[*] Ambiente: KernelSU"
+      ui_print "[*] Versão Do Modulo para KernelSU: $KSU_VER"
+      ui_print "[*] Versão Do KernelSU: ${KSU_VER_CODE}" 
+  else
+      ui_print "[*] Ambiente: Magisk"
+      ui_print "[*] Versão Do Modulo para Magisk: $MAGISK_VER"
+      ui_print "[*] Versão Do Código: ${MAGISK_VER_CODE}" 
+  fi
   sleep 0.5
   ui_print " "
 	ui_print "- Installing files"
