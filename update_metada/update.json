@@ -1,6 +1,6 @@
 {
-    "version": "v1.0.0",
-    "versionCode": 100,
-    "zipUrl": "https://github.com/antoniomalheirs/Blur_And_StatusBar_IOS/releases/download/V1.0.7/Blur_And_StatusBar_IOS.zip",
+    "version": "v1.0.1",
+    "versionCode": 101,
+    "zipUrl": "https://github.com/antoniomalheirs/Blur_And_StatusBar_IOS/releases/download/V1.0.1/Blur_And_StatusBar_IOS.zip",
     "changelog": "https://raw.githubusercontent.com/antoniomalheirs/Blur_And_StatusBar_IOS/main/update_metada/CHANGELOG.md"
 }
