@@ -7,8 +7,7 @@ LATESTARTSERVICE=false
 
 REPLACE="
 "
-on_install() {
-  ui_print "- Extracting module files"
+install_files() {
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
   sleep 2.1
   ui_print "- Mod apply sucess"
@@ -29,7 +28,7 @@ run_install() {
   ui_print " "
 	ui_print "- Installing files"
 	ui_print " "
-  on_install
+  install_files
 	sleep 1
 	ui_print "- Instalation Sucess"
 }
