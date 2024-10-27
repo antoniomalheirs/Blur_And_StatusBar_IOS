@@ -10,7 +10,10 @@ REPLACE="
 install_files() {
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
   sleep 2.1
-  ui_print "- Mod apply sucess"
+  ui_print "[*] Applied Successfully"
+}
+
+cleanup() {
   rm -rf /data/system/package_cache/*
 }
 
@@ -34,7 +37,11 @@ run_install() {
 	ui_print "[*] Installing files"
 	ui_print " "
   install_files
-	sleep 1
+	sleep 0.5
+  ui_print "[*] Cleaning up"
+	ui_print " "
+	cleanup
+  sleep 1
 	ui_print "[*] Instalation Sucess"
 }
 
