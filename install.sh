@@ -11,6 +11,7 @@ install_files() {
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
   sleep 2.1
   ui_print "[*] Applied Successfully"
+  ui_print " "
 }
 
 cleanup() {
@@ -42,7 +43,7 @@ run_install() {
 	ui_print " "
 	cleanup
   sleep 1
-	ui_print "[*] Instalation Sucess"
+	ui_print "[*] Instalation sucess"
 }
 
 set_permissions() {
