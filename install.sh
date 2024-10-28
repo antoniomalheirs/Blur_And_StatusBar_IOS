@@ -19,6 +19,7 @@ cleanup() {
 }
 
 run_install() {
+  unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
   ui_print " "
   ui_print "**********************************"
   ui_print "*     Blur_And_StatusBar_IOS     *"
@@ -44,6 +45,7 @@ run_install() {
 	cleanup
   sleep 1
 	ui_print "[*] Instalation sucess"
+  ui_print " "
 }
 
 set_permissions() {
