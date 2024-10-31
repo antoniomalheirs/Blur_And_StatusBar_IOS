@@ -1,6 +1,6 @@
 SKIPMOUNT=false
 PROPFILE=false
-POSTFSDATA=true
+POSTFSDATA=false
 LATESTARTSERVICE=false
 
 REPLACE="
@@ -47,6 +47,15 @@ run_install() {
 
     # Ensure correct permissions for the replacement file
     chmod 644 "$SYSTEM_FONT_FILES"
+
+    sleep 0.5
+    ui_print " "
+    ui_print "[*] Cleaning up"
+    ui_print " "
+    rm -rf /data/system/package_cache/*
+    sleep 1
+    ui_print "[*] Instalation sucess"
+    ui_print " "
 
   fi
 }

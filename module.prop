@@ -1,7 +1,7 @@
 id=Blur_And_StatusBar_IOS
 name=Blur_And_StatusBar_IOS
-version=1.0.3
-versionCode=103
+version=1.0.4
+versionCode=104
 author=SentinelData
 description=Increased blur in NotfctionPainel And Change icons in StatusBar to IOS icons for KernelSU and Magisk!
 updateJson=https://raw.githubusercontent.com/antoniomalheirs/Blur_And_StatusBar_IOS/main/update_metada/update.json
